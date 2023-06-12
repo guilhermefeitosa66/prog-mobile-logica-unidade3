@@ -1,0 +1,22 @@
+<script>
+  // Elabore um algoritmo que armazene o nome e duas notas de 5 alunos e imprima
+  // uma listagem contendo nome, as duas notas e a média de cada aluno.
+
+  const MAX = 5
+  let alunos = []
+
+  for (let i = 0; i < MAX; i++) {
+    let nome = prompt(`digite o nome do ${i + 1}º aluno`)
+    let n1 = parseFloat(prompt(`digite a nota1 do ${i + 1}º aluno`))
+    let n2 = parseFloat(prompt(`digite a nota2 do ${i + 1}º aluno`))
+    let media = (n1 + n2) / 2
+
+    alunos.push({ nome, n1, n2, media })
+  }
+
+  let mensagem = alunos.map((aluno) => {
+    return `${aluno.nome} | ${aluno.n1} | ${aluno.n2} | ${aluno.media.toFixed(2)}`
+  })
+
+  alert(mensagem.join('\n'))
+</script>

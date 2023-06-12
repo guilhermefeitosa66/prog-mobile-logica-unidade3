@@ -1,0 +1,23 @@
+<script>
+  // Elabore um algoritmo que leia a nota de 80 alunos e que imprima ao final a
+  // nota de cada aluno e a média da turma
+
+  // const MAX = 3
+  const MAX = 80
+  let notas = []
+
+  for (let i = 0; i < MAX; i++) {
+    notas.push(parseFloat(prompt(`digite a nota do ${i + 1}º aluno`)))
+  }
+
+  let soma = notas.reduce((total, n) => {
+    return total + n
+  }, 0)
+
+  let media = soma / notas.length
+
+  alert(
+    `notas da turma: ${notas}\n` +
+    `média da turma: ${media.toFixed(2)}`
+  )
+</script>

@@ -1,0 +1,14 @@
+<script>
+  // Faça um programa que leia um número inteiro e informe se ele é perfeito ou
+  // não. Um número perfeito é aquele que é igual à soma de seus divisores.
+  // Ex.: 6 = 1 + 2 + 3 = número perfeito
+
+  let numero = parseInt(prompt('Informe um número'))
+  let soma = 0
+
+  for (let i = 0; i < numero; i++) {
+    if (numero % i === 0) soma += i
+  }
+
+  numero === soma ? alert(`é perfeito`) : alert(`não é perfeito`)
+</script>

@@ -1,0 +1,21 @@
+<script>
+  // Crie uma função que recebe um vetor e um número. Ela deve mostrar todos os 
+  // índices onde esse número aparece no vetor, e não só apenas o primeiro e/ou 
+  // último índice em que o número aparece.
+
+  function search(num, array) {
+    let indices = []
+
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] === num) {
+        indices.push(i)
+      }
+    }
+
+    return indices
+  }
+
+  let indices = search(2, [1, 2, 3, 1, 2])
+
+  alert(indices)
+</script>

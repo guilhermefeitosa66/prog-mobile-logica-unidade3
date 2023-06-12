@@ -1,0 +1,16 @@
+<script>
+  // Implemente um algoritmo que leia as notas de 10 alunos armazenando as em um
+  // vetor de 10 posições Ao final escreva na tela somente as notas maiores que
+  // 5.0.
+
+  const MAX = 10
+  let notas = []
+
+  for (let i = 0; i < MAX; i++) {
+    notas[i] = parseFloat(prompt(`digite a nota do ${i + 1}º aluno`))
+  }
+
+  let acima_de_5 = notas.filter((n) => { return n > 5 })
+
+  alert(`notas acima de cinco: ${acima_de_5}`)
+</script>
